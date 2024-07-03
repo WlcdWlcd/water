@@ -1,3 +1,3 @@
 pub mod parse_args;
-mod actions;
+pub mod actions;
 

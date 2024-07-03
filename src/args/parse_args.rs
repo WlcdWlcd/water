@@ -1,6 +1,5 @@
-use std::error::Error;
 use std::io;
-use std::io::ErrorKind::InvalidData;
+
 use std::io::ErrorKind::InvalidInput;
 
 use crate::args::actions::ActionsEnum;
