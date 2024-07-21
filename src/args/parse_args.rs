@@ -15,7 +15,7 @@ pub fn parse_args(args: Vec<String>)->Result<ActionsEnum,io::Error>{
             "-D"=>{
                 if let Some(count)= iterator.next(){
                     if let Ok(count_i) = count.parse::<usize>(){
-                        Ok(ActionsEnum::DrinkEnter(count_i))
+                        Ok(ActionsEnum::DrinkCustom(count_i))
                     }
                     else{
                         Err(io::Error::new(InvalidInput,"Invalid drink count provided, drink count must be a positive number"))
@@ -62,7 +62,7 @@ mod tests {
         let args = vec!["E:\\folder\\water.exe".to_string(),
         "-D".to_string(),
          "200".to_string()];
-        assert_eq!(parse_args(args).unwrap(), ActionsEnum::DrinkEnter(200));
+        assert_eq!(parse_args(args).unwrap(), ActionsEnum::DrinkCustom(200));
     }
     #[test]
     fn test_D_with_no_entered_value(){

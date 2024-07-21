@@ -1,7 +1,6 @@
 use crate::args::actions::ActionsEnum;
-
-use crate::help::help;
-use crate::check_config::check_config;
+use crate::help;
+use crate::config::check_config::check_config;
 
 
 pub fn match_action(action: ActionsEnum){

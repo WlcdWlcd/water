@@ -1,7 +1,7 @@
 #[derive(PartialEq, Debug)]
 pub enum ActionsEnum {
     DrinkDefault,
-    DrinkEnter(usize),
+    DrinkCustom(usize),
     Stats,
     Help,
     SetConfig,
