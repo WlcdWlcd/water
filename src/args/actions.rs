@@ -4,7 +4,8 @@ pub enum ActionsEnum {
     DrinkEnter(usize),
     Stats,
     Help,
-
+    SetConfig,
+    CheckConfig
     
 
 }

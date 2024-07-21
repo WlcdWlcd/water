@@ -28,6 +28,8 @@ pub fn parse_args(args: Vec<String>)->Result<ActionsEnum,io::Error>{
 
             }
             "-h" | "-H"=>Ok(ActionsEnum::Help),
+            "-c" =>Ok(ActionsEnum::CheckConfig),
+            "-C"=>Ok(ActionsEnum::SetConfig),
             _=>{
                 
                 Err(io::Error::new(InvalidInput,"Ivalid argumets to help run with -h"))}
